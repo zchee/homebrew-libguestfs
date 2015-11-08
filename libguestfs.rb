@@ -210,9 +210,9 @@ class Libguestfs < Formula
 
     if build.with? "go"
       # Fix maked go files permission
-      FileUtils.chmod_R "+w", "#{lib}/golang/src/libguestfs.org/guestfs"
+      # FileUtils.chmod_R "+w", "#{lib}/golang/src/libguestfs.org/guestfs"
       # Fix not according Go fmt guideline
-      system "gofmt", "-w", "#{lib}/golang/src/libguestfs.org/guestfs"
+      # system "gofmt", "-w", "#{lib}/golang/src/libguestfs.org/guestfs"
       # Symlink $GOPATH instead $GOROOT
       # TODO brew do not parse $GOROOT and $GOPATH
       # (lib/"golang/pkg").install "#{ENV["GOPATH"]}/pkg"
